@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temperature Convertor.</title>
+    <script>
+        function Temperature(){
+            var x = parseFloat(document.getElementById("temp").value);
+            if(x.valueOf==isNaN)
+            alert("Enter the temperature in numeric form");
+            else{
+            c = ((x - 32) * (5*1.0/9));
+            document.getElementById("result").innerHTML=c;
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>TEMPERATURE CONVERTOR.</h1>
+    <textarea name="temp" id="temp" cols="50" rows="4"></textarea>
+    <button name="convert" onclick="Temperature()">SHOW RESULTS.</button>
+    <p id="result"></p>
+</body>
+</html>
