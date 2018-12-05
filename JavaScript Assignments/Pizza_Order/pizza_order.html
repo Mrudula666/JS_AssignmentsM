@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Order</title>
+    <script src="C:\JS_Assignments\JavaScript Assignments\Pizza_Order\pizza_order.js"></script>
+    <link rel="stylesheet" href="C:\JS_Assignments\JavaScript Assignments\Pizza_Order\pizza_order.css">
+</head>
+<body>
+    <form name="pizza_delivery">
+        <label for="name">Name:</label>
+        <input type="text" id="name_1" name="name"><br><br>
+        <label for="name">Email:</label>
+        <input type="email" name="mail" id="mail">
+        <h3>Toppings:</h3>
+        Extra Cheese:<input type="checkbox" name="Toppings">
+        Pepperoni:<input type="checkbox" name="Toppings">
+        Olives:<input type="checkbox" name="Toppings">
+        Pepper:<input type="checkbox" name="Toppings">
+        Bacon:<input type="checkbox" name="Toppings">
+        Tomatoes:<input type="checkbox" name="Toppings">
+        Mushrooms:<input type="checkbox" name="Toppings">
+        <h3>How do you want to get your Pizza!</h3>
+        Delivery<input type="radio" name="order">Pickup<input type="radio" name="order"><br><br>
+        <label for="tip" id="sorting">Tip?</label>
+        <select name="tip_values" id="values">
+            <option value="15%" selected>15%</option>
+            <option value="20%" >20%</option>
+            <option value="25%">25%</option>
+        </select>
+        <hr/>
+        <h3>Address:</h3>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea><br>
+        <br>
+        <button type="submit" id="submit" onclick="submit_m()">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="myfunction()" id="sub_s" disabled>Submit Summary</button>
+        <table id="displaytable">
+            <caption>Pizza Order Summary.</caption>
+                <tr>
+                <td>Name:</td>
+                <td id="c_name"></td>
+                </tr>
+                <tr>
+                <td>Email:</td>
+                <td id="c_mail"></td>
+                </tr>
+                <tr>
+                <td>Address:</td>
+                <td id="c_address"></td>
+                </tr>
+                <tr>
+                    <td>Toppings:</td>
+                </tr>
+                <tr>
+                    <td>Toppings 1:</td>
+                    <td id="t_1"></td>
+                </tr>
+                <tr>
+                    <td>Toppings 2:</td>
+                    <td id="t_2"></td>
+                </tr>
+                <tr>
+                    <td>Delivery?</td>
+                    <td id="d"></td>
+                </tr>
+                <tr>
+                    <td>Tip amount:</td>
+                    <td id="t_amt"></td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td id="total"></td>
+                </tr>
+      </table>
+
+    </form>
+</body>
+</html>

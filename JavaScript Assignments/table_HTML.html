@@ -8,14 +8,14 @@
     <script>
         var rows = parseInt(prompt("Enter the rows:"));
         document.getElementById('table1').rows[0].cells.length = rows;
-        var cols = parseInt(prompt("Enter the rows:"));
-        document.getElementById("cols").value = cols;
+        var cols = parseInt(prompt("Enter the columns:"));
+        document.getElementById('table1').cols[0].cells.length = cols;
 
 
     </script>
 </head>
 <body>
     <button type="button" onclick="number()">Click create table:</button>
-    <table ></table>
+    <table id="table1"></table>
 </body>
 </html>
