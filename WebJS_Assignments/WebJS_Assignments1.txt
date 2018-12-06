@@ -1,0 +1,269 @@
+1. List all the DOM objects names below.
+It is the programming interface for HTML.
+The DOM objects are:
+1. Window 
+2. Document Object
+3. Form Obejct.
+4. form_controls.
+2. List all the BOM objects names below.
+Used to interact with the user.
+The window objects are:
+1. document.
+2. History
+3. Screen.
+4. Navigator.
+5. Location.
+3.1. Find out most commonly used functions(minimum 4) of "document" object and write their purpose with a code snippet which proves the purpose.
+The most commonly used "document" Objects are:
+1. document.getElementById():
+This will find the element in HTML page with the help of id.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHECK</title>
+    <script>
+	function msg(){
+	x = "HELLO WORLD";
+    	document.getElementById("msg").value = x;
+	};
+	</script>
+</head>
+<body>
+    <h1>BUTTON</h1>
+    <H2><button type="button" onclick="msg()" id="msg1">CLICK</button></H2>
+    <textarea name="msg" id="msg"></textarea>
+    
+</body>
+</html>
+2. document.getElementsByTagName(name):
+Changes the content in the tag.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag Name</title>
+    <script>
+	function msg(){
+    	var x = document.getElementById("myDIV");
+    	x.getElementsByTagName("P")[1].style.backgroundColor = "red";
+    };
+</script>
+</head>
+<body>
+    <div id="myDIV">
+        <p>HI</p>
+        <p>HELLO</p>
+        <p>HOW R YOU???</p>
+    </div>
+        <H2><button type="button" onclick="msg()" id="msg1">CLICK</button></H2>
+      
+</body>
+</html>
+3. document.getElementByClassName():
+Changes thecontent with the help of class
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag Name</title>
+    <script>
+	function msg(){
+	    var x = document.getElementsByClassName("example");
+    		x[0].innerHTML = "HOW R YOU???";
+	};
+</script>
+</head>
+<body>
+        <div class="example">HI</div>
+        <div class="example">HELLO</div>
+        <H2><button type="button" onclick="msg()" id="msg1">CLICK</button></H2>
+    
+</body>
+</html>
+4. document.getElementsByTagName():
+changes the text or color in the document
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag Name.</title>
+    <script>
+	function msg(){
+    document.getElementsByTagName("P")[0].innerHTML = "MRUDULAA";
+    };
+	</script>
+</head>
+<body>
+                <p>HOW R YOU???</p>
+                <H2><button type="button" onclick="msg()" id="msg1">CLICK</button></H2>
+</body>
+</html>
+
+
+3.2. Find out most commonly used functions(minimum 4) of "window" object and write their purpose with a code snippet which proves the purpose.
+The following are the some of functions in the "WINDOW" objects:
+window.prompt():
+This function is used to prompt the user to give the response.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt</title>
+    <script src="C:\JS_Assignments\WebJS_Assignments\window_objects\prompt.js"></script>
+</head>
+<body>
+        <p>Click the button to demonstrate the prompt box.</p>
+
+        <button onclick="myFunction()">Try it</button>
+        
+        <p id="demo"></p>
+    
+</body>
+
+js file:function myFunction() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "! How are you today?";
+    }
+}
+window.alert():
+
+</html>
+
+4. Create an HTML page with a button on it, when the button is clicked, it should display an alert box with text "Hello World"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+    <script>
+	function msg(){
+    alert("HELLO WORLD");//creates an alert box.
+	}
+	</script>
+</head>
+<body>
+    <h1>Alert</h1>
+    <H2><button type="button" onclick="msg()">CLICK</button></H2>
+</body>
+</html>
+
+5. Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page.
+NOTE: The buttton might have gone after text appears.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text_Msg</title>
+    <script>
+	function msg(){
+    x = "HELLO WORLD";
+    //document.getElementById("msg").value = x;*/
+    var button = document.getElementById('msg1');
+    button.addEventListener('click',hideshow,false);
+
+    function hideshow() {
+        document.getElementById('msg').style.display = "block";
+        document.getElementById('msg').value = "HELLO WORLD";
+        this.style.display = 'none';
+    };
+    
+};
+	</script>
+</head>
+<body>
+    <h1>MESSAGE</h1>
+    <H2><button type="button" onclick="msg()" id="msg1">CLICK</button></H2>
+    <textarea name="msg" id="msg"></textarea>
+</body>
+</html>
+
+6. Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page, just below the button.
+NOTE: This time the button should not go off, it is still visible and present on the page.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHECK</title>
+    <script>
+	function msg(){
+	x = "HELLO WORLD";
+    document.getElementById("msg").value = x;
+	};
+	</script>
+</head>
+<body>
+    <h1>BUTTON</h1>
+    <H2><button type="button" onclick="msg()" id="msg1">CLICK</button></H2>
+    <textarea name="msg" id="msg"></textarea>
+    
+</body>
+</html>
+
+7. Create an HTML Page with a textbox and a button, write anything in the text box and click on the button, Onclick of the button it should display the text on the alert box that was entered in the textbox.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Details</title>
+    <script>
+	function checkName(){
+	    alert(document.getElementById("name1").value);
+	};
+</script>
+</head>
+<body>
+    <h1>Enter the details</h1>
+    <label for="name">Enter name:</label>
+    <input type="text" name="name" id="name1">
+    <button type="button" onclick="checkName()">Click</button>
+    
+</body>
+</html>
+
+8.Create an HTML Page with a textbox and a button, write anything in the text box and click on the button, Onclick of the button it should display the text just below the textbox on the webpage that was entered in the textbox.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text_Area</title>
+    <script>
+    function checkName(){
+    name1 = document.getElementById("name").value;
+    document.getElementById("name1").value = name1;
+	};
+     </script>
+</head>
+<body>
+    <h1>Details of the Member:</h1>
+    <label for="name">Enter the name:</label>
+    <input type="text" name="name" id="name">
+    <button type="button" onclick="checkName()">Enter</button>
+    <input type="text" name="ans_name" id="name1">
+    
+</body>
+</html>

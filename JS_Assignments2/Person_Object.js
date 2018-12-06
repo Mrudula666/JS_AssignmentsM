@@ -20,7 +20,7 @@ var Amitabh = {fname:"AMITHABH",
             Profession:'ACTOR'
           };
 var person2 = {fname:"Bhargavi",
-          lname:"Kakarla",
+          lname:"Karri",
           age:22,
           skills:['java','sql'],
           address: { city:'Anakapalli',pincode:526456},

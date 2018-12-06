@@ -6,16 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-        var rows = parseInt(prompt("Enter the rows:"));
-        document.getElementById('table1').rows[0].cells.length = rows;
-        var cols = parseInt(prompt("Enter the columns:"));
-        document.getElementById('table1').cols[0].cells.length = cols;
-
-
+        function number(){
+            row_number = prompt("Enter the row number: ");
+            column_number = prompt("Enter the column number:");
+            for(var r=0;r<row_number;r++){
+                var x = document.getElementById('table1').insertRow(r);
+                for(var c = 0;c<column_number;c++){
+                    var y = x.insertCell(c);
+                    y.innerHTML = "Row: "+r+","+"Column: "+c;
+                }
+            }
+        }
     </script>
+    <style type="text/css">
+    body{
+        margin: 30px;
+    }
+    </style>
 </head>
 <body>
+    <h1>Create Table</h1>
+    <p id="row"></p>
+    <p id="column"></p>
+    <table id="table1" border="1">
+
+    </table>
     <button type="button" onclick="number()">Click create table:</button>
-    <table id="table1"></table>
+    
 </body>
 </html>

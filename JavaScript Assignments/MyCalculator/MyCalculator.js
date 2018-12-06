@@ -33,15 +33,14 @@
             document.getElementById("result").innerHTML = c;
             break;
             case 6:
-            var no =(prompt("Enter series of numbers...."));
+            var no = window.prompt("Enter the series of numbers:");
             var string = '***';
             c=1,sum =0;
-            while(no!=string){
+            while(!no.includes(string)){
                 {
-                no = parseInt(no);
-                    sum =sum+no;
-                    c = c+1;
-                    no = parseInt(prompt("Enter series of numbers...."));
+                    sum+=parseInt(no,10);
+                    c++;
+                    no = (prompt("Enter series of numbers...."));
                 }
             }
             mean = sum/c;
